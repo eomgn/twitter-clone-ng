@@ -11,6 +11,7 @@
         <!-- formulary -->
         <div class="flex-1">
             <textarea
+            (keyup.enter)="sendTweet()"
             [(ngModel)]="tweetMessage"
             (input)="changeTweet()"
             [maxlength]="tweetMaxLength" 
@@ -18,7 +19,7 @@
             focus:shadow-outline focus:bg-gray-100 resize-none
             border border-transparent rounded-lg py-2 px-4 block
             w-full appearance-none font-light placeholder-gray-700"
-            placeholder="What's happening..." rows="3" ></textarea>
+            placeholder="What's happening..." rows="3"></textarea>
 
             <!-- divider line -->
             <div class=" w-auto border rounded-md"></div>
